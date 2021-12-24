@@ -42,11 +42,10 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyAppTheme(content: @Composable () -> Unit) {
     val colors = lightColors(
-        surface = Color(0xff202124),
+        surface = Color(0xff121212),
         background = Color(0xff242424),
         onPrimary = Color(0xffffffff),
         secondary = Color(0xff737373),
-        secondaryVariant = Color(0xff242424),
         primary = Color(0xff6200EE)
     )
     MaterialTheme(colors = colors, content = content)

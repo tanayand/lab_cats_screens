@@ -36,7 +36,7 @@ import com.example.my_app_compose.ui.theme.My_app_composeTheme
 fun ProfileScreen() {
     MyAppTheme {
         Surface(
-            color = MaterialTheme.colors.surface
+            color = MaterialTheme.colors.surface,
         ) {
             Scaffold(
                 floatingActionButton = {
@@ -61,14 +61,11 @@ fun ProfileScreen() {
                                 fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colors.onPrimary,
                             )
-                            Column(modifier = Modifier.padding(vertical = 8.dp)) {
-                                Spacer(
-                                    Modifier
-                                        .height(2.dp)
-                                        .fillMaxWidth()
-                                        .background(color = MaterialTheme.colors.secondaryVariant)
-                                )
-                            }
+                            Divider(
+                                color = Color.DarkGray,
+                                thickness = 2.dp,
+                                modifier = Modifier.padding(vertical = 8.dp)
+                            )
 
                             Text(
                                 "Sex",
@@ -80,15 +77,11 @@ fun ProfileScreen() {
                                 fontSize = 15.sp,
                                 color = MaterialTheme.colors.onPrimary,
                             )
-                            Column(modifier = Modifier.padding(vertical = 5.dp)) {
-                                Spacer(
-                                    Modifier
-                                        .height(2.dp)
-                                        .fillMaxWidth()
-                                        .background(color = MaterialTheme.colors.secondaryVariant)
-                                )
-                            }
-
+                            Divider(
+                                color = Color.DarkGray,
+                                thickness = 2.dp,
+                                modifier = Modifier.padding(vertical = 8.dp)
+                            )
                             Text(
                                 "Age",
                                 fontSize = 12.sp,
@@ -99,15 +92,11 @@ fun ProfileScreen() {
                                 fontSize = 15.sp,
                                 color = MaterialTheme.colors.onPrimary,
                             )
-                            Column(modifier = Modifier.padding(vertical = 5.dp)) {
-                                Spacer(
-                                    Modifier
-                                        .height(2.dp)
-                                        .fillMaxWidth()
-                                        .background(color = MaterialTheme.colors.secondaryVariant)
-                                )
-                            }
-
+                            Divider(
+                                color = Color.DarkGray,
+                                thickness = 2.dp,
+                                modifier = Modifier.padding(vertical = 8.dp)
+                            )
                             Text(
                                 "Personality",
                                 fontSize = 12.sp,

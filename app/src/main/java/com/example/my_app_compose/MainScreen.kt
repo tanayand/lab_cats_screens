@@ -95,7 +95,7 @@ fun ItemsComponent(data: List<Item>) {
 }
 
 //@Preview(showBackground = true, device = Devices.PIXEL_2)
-//@Preview(showBackground = true)
+@Preview(showBackground = true)
 @Composable
 fun MainScreen() {
     MyAppTheme{
