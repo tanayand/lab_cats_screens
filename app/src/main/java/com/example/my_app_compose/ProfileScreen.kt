@@ -31,9 +31,9 @@ import androidx.compose.ui.unit.sp
 import com.example.my_app_compose.ui.theme.My_app_composeTheme
 
 
-@Preview(showBackground = true, device = Devices.PIXEL_2)
+//@Preview(showBackground = true, device = Devices.PIXEL_2)
 @Composable
-fun ProfileScreen() {
+fun ProfileScreen(item: Item) {
     MyAppTheme {
         Surface(
             color = MaterialTheme.colors.surface,
@@ -50,13 +50,13 @@ fun ProfileScreen() {
                 content = {
                     Column() {
                         Image(
-                            painter = painterResource(id = R.drawable.cat3),
+                            painter = painterResource(id = item.image),
                             contentDescription = null,
                             modifier = Modifier.fillMaxWidth()
                         )
                         Column(modifier = Modifier.padding(15.dp)) {
                             Text(
-                                "Lucy",
+                                item.title,
                                 fontSize = 24.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colors.onPrimary,
@@ -73,7 +73,7 @@ fun ProfileScreen() {
                                 color = MaterialTheme.colors.secondary
                             )
                             Text(
-                                "Female",
+                                item.sex,
                                 fontSize = 15.sp,
                                 color = MaterialTheme.colors.onPrimary,
                             )
@@ -88,7 +88,7 @@ fun ProfileScreen() {
                                 color = MaterialTheme.colors.secondary
                             )
                             Text(
-                                "8",
+                                item.age.toString(),
                                 fontSize = 15.sp,
                                 color = MaterialTheme.colors.onPrimary,
                             )
@@ -103,7 +103,7 @@ fun ProfileScreen() {
                                 color = MaterialTheme.colors.secondary
                             )
                             Text(
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                                item.description,
                                 fontSize = 15.sp,
                                 color = MaterialTheme.colors.onPrimary,
                             )
